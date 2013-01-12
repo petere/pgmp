@@ -1,0 +1,7 @@
+CREATE FUNCTION mpz_to_plpython(val mpz) RETURNS internal
+LANGUAGE C STRICT IMMUTABLE
+AS 'MODULE_PATHNAME';
+
+CREATE TRANSFORM FOR mpz LANGUAGE plpythonu (
+    FROM SQL WITH FUNCTION mpz_to_plpython(mpz)
+);

@@ -1,0 +1,5 @@
+comment = 'transforms between pgmp and plpythonu'
+default_version = '1.0'
+module_pathname = '$libdir/pgmp_plpython2'
+relocatable = true
+requires = 'pgmp,plpythonu'
